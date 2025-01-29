@@ -125,7 +125,7 @@ print("These values are not the same")
 }}
 f3(2)
 
-#own activity
+#own activity1
 tax<-function(x){
   if (x>10000)
   {
@@ -141,4 +141,15 @@ tax<-function(x){
 }
 tax(20000)
 tax(1000)
+
+#0wn activity2
+F1<-function(a,b,c,d,e){
+  m<- a*b
+  s<-c+m+d
+  d<-s/e
+  print("The value obtained is")
+  return(d)
+}
+F1(1,2,3,4,5)
+F1(167,182,196,159,1804)
 
