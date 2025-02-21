@@ -1,0 +1,19 @@
+abehera@hp:~$ nano test.sh
+abehera@hp:~$ bash test.sh
+Hello, World!
+abehera@hp:~$ nano activity1.sh
+abehera@hp:~$ bash activity1.sh
+abehera@hp:~$ ls
+activity1.sh  bashscript  dir1  empty.txt  practice_folder  renpfile.txt  test.sh
+abehera@hp:~$ cd bashscript
+abehera@hp:~/bashscript$ ls
+bs1.txt
+abehera@hp:~/bashscript$ nano bs1.txt
+abehera@hp:~/bashscript$ less bs1.txt
+abehera@hp:~/bashscript$ cd ..
+abehera@hp:~$
+abehera@hp:~$ ls
+activity1.sh  activity2.sh  bashscript  dir1  empty.txt  practice_folder  renpfile.txt  test.sh
+abehera@hp:~$ bash activity2.sh
+Hello, How are you?
+abehera@hp:~$
