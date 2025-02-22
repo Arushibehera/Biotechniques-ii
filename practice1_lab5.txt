@@ -1,0 +1,73 @@
+abehera@hp:~$ mkdir /tmp/tutorial
+abehera@hp:~$ cd /tmp/tutorial
+abehera@hp:/tmp/tutorial$ mkdir d1 d2 d3 d4
+abehera@hp:/tmp/tutorial$ ls
+d1  d2  d3  d4
+abehera@hp:/tmp/tutorial$ mkdir -p d5/d6
+abehera@hp:/tmp/tutorial$ ls
+d1  d2  d3  d4  d5
+abehera@hp:/tmp/tutorial$ cd d5
+abehera@hp:/tmp/tutorial/d5$ ls
+d6
+abehera@hp:/tmp/tutorial/d5$ cd ..
+abehera@hp:/tmp/tutorial$ mkdir "folder 1" folder\ 2
+abehera@hp:/tmp/tutorial$ ls
+ d1   d2   d3   d4   d5  'folder 1'  'folder 2'
+abehera@hp:/tmp/tutorial$ ls > output.txt
+abehera@hp:/tmp/tutorial$ ls
+ d1   d2   d3   d4   d5  'folder 1'  'folder 2'   output.txt
+abehera@hp:/tmp/tutorial$ cat output.txt
+d1
+d2
+d3
+d4
+d5
+folder 1
+folder 2
+output.txt
+abehera@hp:/tmp/tutorial$ echo "Hello" > line1.txt
+abehera@hp:/tmp/tutorial$ echo "My name is Arushi" > line2.txt
+abehera@hp:/tmp/tutorial$ echo "What is your name?" > line3.txt
+abehera@hp:/tmp/tutorial$ cat line1.txt line2.txt line3.txt
+Hello
+My name is Arushi
+What is your name?
+abehera@hp:/tmp/tutorial$ cat line*
+Hello
+My name is Arushi
+What is your name?
+abehera@hp:/tmp/tutorial$ cat line?
+cat: 'line?': No such file or directory
+abehera@hp:/tmp/tutorial$ cat line?.txt
+Hello
+My name is Arushi
+What is your name?
+abehera@hp:/tmp/tutorial$ cat line* > combined.txt
+abehera@hp:/tmp/tutorial$ cat combined.txt
+Hello
+My name is Arushi
+What is your name?
+abehera@hp:/tmp/tutorial$ cat line* > combined.txt
+abehera@hp:/tmp/tutorial$ cat combined.txt
+Hello
+My name is Arushi
+What is your name?
+abehera@hp:/tmp/tutorial$ echo "I have added another line" >> combined.txt
+abehera@hp:/tmp/tutorial$ cat combined.txt
+Hello
+My name is Arushi
+What is your name?
+I have added another line
+abehera@hp:/tmp/tutorial$ wc -l combined.txt
+4 combined.txt
+abehera@hp:/tmp/tutorial$ wc combined.txt
+ 4 14 69 combined.txt
+abehera@hp:/tmp/tutorial$ ls | wc -l
+12
+abehera@hp:/tmp/tutorial$ ls
+ combined.txt   d1   d2   d3   d4   d5  'folder 1'  'folder 2'   line1.txt   line2.txt   line3.txt   output.txt
+abehera@hp:/tmp/tutorial$ ls | less
+abehera@hp:/tmp/tutorial$ man uniq
+abehera@hp:/tmp/tutorial$ sort combined.text | less
+abehera@hp:/tmp/tutorial$ sort combined.txt | less
+abehera@hp:/tmp/tutorial$

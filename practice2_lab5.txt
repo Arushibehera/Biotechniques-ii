@@ -1,0 +1,28 @@
+abehera@hp:~$ mkdir scripts
+mkdir: cannot create directory ‘scripts’: File exists
+abehera@hp:~$ cd scripts
+abehera@hp:~/scripts$ nano bshell1.sh
+abehera@hp:~/scripts$ bash bshell1.sh
+Hello, my name is Arushi, What is your name?
+tusar
+Hello, tusar
+abehera@hp:~/scripts$ nanobshell2.sh
+nanobshell2.sh: command not found
+abehera@hp:~/scripts$ nano bsheel2.sh
+abehera@hp:~/scripts$ nano bshell2.sh
+abehera@hp:~/scripts$ bash bshell2.sh
+6 5
+3.14
+bshell2.sh: line 8: pi: readonly variable
+3.14
+abehera@hp:~/scripts$ nano bshell3.sh
+abehera@hp:~/scripts$ bash bshell3.sh
+Hello, abehera
+abehera@hp:~/scripts$ nano bshell3.sh
+abehera@hp:~/scripts$ bash bshell3.sh
+Fri Feb 21 21:02:57 EST 2025
+Hello, abehera
+abehera@hp:~/scripts$ nano bshell1.sh
+abehera@hp:~/scripts$ nano bshell2.sh
+abehera@hp:~/scripts$ nano bshell3.sh
+abehera@hp:~/scripts$
