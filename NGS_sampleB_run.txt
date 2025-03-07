@@ -1,0 +1,557 @@
+abehera@hp:~$ bash NGS_sampleB.sh
+mkdir: cannot create directory ‘sampleB’: File exists
+application/gzip
+Started analysis of sampleB_R1.fq.gz
+Approx 5% complete for sampleB_R1.fq.gz
+Approx 10% complete for sampleB_R1.fq.gz
+Approx 15% complete for sampleB_R1.fq.gz
+Approx 20% complete for sampleB_R1.fq.gz
+Approx 25% complete for sampleB_R1.fq.gz
+Approx 30% complete for sampleB_R1.fq.gz
+Approx 35% complete for sampleB_R1.fq.gz
+Approx 40% complete for sampleB_R1.fq.gz
+Approx 45% complete for sampleB_R1.fq.gz
+Approx 50% complete for sampleB_R1.fq.gz
+Approx 55% complete for sampleB_R1.fq.gz
+Approx 60% complete for sampleB_R1.fq.gz
+Approx 65% complete for sampleB_R1.fq.gz
+Approx 70% complete for sampleB_R1.fq.gz
+Approx 75% complete for sampleB_R1.fq.gz
+Approx 80% complete for sampleB_R1.fq.gz
+Approx 85% complete for sampleB_R1.fq.gz
+Approx 90% complete for sampleB_R1.fq.gz
+Approx 95% complete for sampleB_R1.fq.gz
+Analysis complete for sampleB_R1.fq.gz
+application/gzip
+Started analysis of sampleB_R2.fq.gz
+Approx 5% complete for sampleB_R2.fq.gz
+Approx 10% complete for sampleB_R2.fq.gz
+Approx 15% complete for sampleB_R2.fq.gz
+Approx 20% complete for sampleB_R2.fq.gz
+Approx 25% complete for sampleB_R2.fq.gz
+Approx 30% complete for sampleB_R2.fq.gz
+Approx 35% complete for sampleB_R2.fq.gz
+Approx 40% complete for sampleB_R2.fq.gz
+Approx 45% complete for sampleB_R2.fq.gz
+Approx 50% complete for sampleB_R2.fq.gz
+Approx 55% complete for sampleB_R2.fq.gz
+Approx 60% complete for sampleB_R2.fq.gz
+Approx 65% complete for sampleB_R2.fq.gz
+Approx 70% complete for sampleB_R2.fq.gz
+Approx 75% complete for sampleB_R2.fq.gz
+Approx 80% complete for sampleB_R2.fq.gz
+Approx 85% complete for sampleB_R2.fq.gz
+Approx 90% complete for sampleB_R2.fq.gz
+Approx 95% complete for sampleB_R2.fq.gz
+Analysis complete for sampleB_R2.fq.gz
+mv: cannot stat 'sampleB_R1.fq.gz.html': No such file or directory
+mv: cannot stat 'sampleB_R2.fq.gz.html': No such file or directory
+This is cutadapt 4.4 with Python 3.12.3
+Command line parameters: -a AGATCGGAAG -A AGATCGGAAG -m 100 -o sampleB/sampleB_R1.out.fq.gz -p sampleB/sampleB_R2.out.fq.gz sampleB_R1.fq.gz sampleB_R2.fq.gz
+Processing paired-end reads on 1 core ...
+Done           00:00:41     3,022,207 reads @  13.9 µs/read;   4.33 M reads/minute
+Finished in 41.952 s (13.881 µs/read; 4.32 M reads/minute).
+
+=== Summary ===
+
+Total read pairs processed:          3,022,207
+  Read 1 with adapter:                   6,813 (0.2%)
+  Read 2 with adapter:                   6,731 (0.2%)
+
+== Read fate breakdown ==
+Pairs that were too short:             990,043 (32.8%)
+Pairs written (passing filters):     2,032,164 (67.2%)
+
+Total basepairs processed:   701,969,545 bp
+  Read 1:   350,325,947 bp
+  Read 2:   351,643,598 bp
+Total written (filtered):    553,091,017 bp (78.8%)
+  Read 1:   276,437,254 bp
+  Read 2:   276,653,763 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: AGATCGGAAG; Type: regular 3'; Length: 10; Trimmed: 6813 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10 bp: 1
+
+Bases preceding removed adapters:
+  A: 24.2%
+  C: 24.4%
+  G: 40.1%
+  T: 11.3%
+  none/other: 0.0%
+
+Overview of removed sequences
+length  count   expect  max.err error counts
+3       906     47222.0 0       906
+4       130     11805.5 0       130
+5       302     2951.4  0       302
+6       25      737.8   0       25
+7       5       184.5   0       5
+9       2       11.5    0       0 2
+10      85      2.9     1       0 85
+12      54      2.9     1       0 54
+13      107     2.9     1       0 107
+14      180     2.9     1       0 180
+15      55      2.9     1       0 55
+16      85      2.9     1       0 85
+17      76      2.9     1       0 76
+18      92      2.9     1       0 92
+19      60      2.9     1       0 60
+20      85      2.9     1       0 85
+21      116     2.9     1       0 116
+22      52      2.9     1       0 52
+23      94      2.9     1       0 94
+24      74      2.9     1       0 74
+25      46      2.9     1       0 46
+26      98      2.9     1       0 98
+27      81      2.9     1       0 81
+28      36      2.9     1       0 36
+29      67      2.9     1       0 67
+30      92      2.9     1       0 92
+31      77      2.9     1       0 77
+32      78      2.9     1       0 78
+33      39      2.9     1       0 39
+34      66      2.9     1       0 66
+35      37      2.9     1       0 37
+36      86      2.9     1       0 86
+37      99      2.9     1       0 99
+38      112     2.9     1       0 112
+39      46      2.9     1       0 46
+40      54      2.9     1       0 54
+41      36      2.9     1       0 36
+42      26      2.9     1       0 26
+43      96      2.9     1       0 96
+44      84      2.9     1       0 84
+45      95      2.9     1       0 95
+46      56      2.9     1       0 56
+47      116     2.9     1       0 116
+48      65      2.9     1       0 65
+49      17      2.9     1       0 17
+50      49      2.9     1       0 49
+51      99      2.9     1       0 99
+52      64      2.9     1       0 64
+53      72      2.9     1       0 72
+54      79      2.9     1       0 79
+55      13      2.9     1       0 13
+56      83      2.9     1       0 83
+57      37      2.9     1       0 37
+58      73      2.9     1       0 73
+59      61      2.9     1       0 61
+60      69      2.9     1       0 69
+61      55      2.9     1       0 55
+62      31      2.9     1       0 31
+63      68      2.9     1       0 68
+64      45      2.9     1       0 45
+65      49      2.9     1       0 49
+66      63      2.9     1       0 63
+67      50      2.9     1       0 50
+68      44      2.9     1       0 44
+69      28      2.9     1       0 28
+70      39      2.9     1       0 39
+71      13      2.9     1       0 13
+72      82      2.9     1       0 82
+73      22      2.9     1       0 22
+74      37      2.9     1       0 37
+75      17      2.9     1       0 17
+76      43      2.9     1       0 43
+77      25      2.9     1       0 25
+78      55      2.9     1       0 55
+79      34      2.9     1       0 34
+80      36      2.9     1       0 36
+81      34      2.9     1       0 34
+82      31      2.9     1       0 31
+83      57      2.9     1       0 57
+84      67      2.9     1       0 67
+85      50      2.9     1       0 50
+86      22      2.9     1       0 22
+87      24      2.9     1       0 24
+88      37      2.9     1       0 37
+89      28      2.9     1       0 28
+90      21      2.9     1       0 21
+91      12      2.9     1       0 12
+92      53      2.9     1       0 53
+93      15      2.9     1       0 15
+94      55      2.9     1       0 55
+95      21      2.9     1       0 21
+96      48      2.9     1       0 48
+97      29      2.9     1       0 29
+98      28      2.9     1       0 28
+99      22      2.9     1       0 22
+100     6       2.9     1       0 6
+101     14      2.9     1       0 14
+102     16      2.9     1       0 16
+103     11      2.9     1       0 11
+104     37      2.9     1       0 37
+105     19      2.9     1       0 19
+106     7       2.9     1       0 7
+107     5       2.9     1       0 5
+110     35      2.9     1       0 35
+111     12      2.9     1       0 12
+112     18      2.9     1       0 18
+113     7       2.9     1       0 7
+114     7       2.9     1       0 7
+115     13      2.9     1       0 13
+116     10      2.9     1       0 10
+117     20      2.9     1       0 20
+118     13      2.9     1       0 13
+119     9       2.9     1       0 9
+120     9       2.9     1       0 9
+122     15      2.9     1       0 15
+123     7       2.9     1       0 7
+124     5       2.9     1       0 5
+125     12      2.9     1       0 12
+126     12      2.9     1       0 12
+129     2       2.9     1       0 2
+130     13      2.9     1       0 13
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: AGATCGGAAG; Type: regular 3'; Length: 10; Trimmed: 6731 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10 bp: 1
+
+Bases preceding removed adapters:
+  A: 25.8%
+  C: 21.2%
+  G: 40.3%
+  T: 12.5%
+  none/other: 0.2%
+
+Overview of removed sequences
+length  count   expect  max.err error counts
+3       1051    47222.0 0       1051
+4       296     11805.5 0       296
+5       89      2951.4  0       89
+6       24      737.8   0       24
+17      45      2.9     1       0 45
+19      76      2.9     1       0 76
+20      76      2.9     1       0 76
+21      142     2.9     1       0 142
+22      45      2.9     1       0 45
+23      79      2.9     1       0 79
+24      90      2.9     1       0 90
+25      71      2.9     1       0 71
+26      47      2.9     1       0 47
+27      72      2.9     1       0 72
+28      150     2.9     1       0 150
+29      43      2.9     1       0 43
+30      48      2.9     1       0 48
+31      31      2.9     1       0 31
+32      42      2.9     1       0 42
+33      91      2.9     1       0 91
+34      58      2.9     1       0 58
+35      47      2.9     1       0 47
+36      55      2.9     1       0 55
+37      91      2.9     1       0 91
+38      76      2.9     1       0 76
+39      79      2.9     1       0 79
+40      63      2.9     1       0 63
+41      58      2.9     1       0 58
+42      48      2.9     1       0 48
+43      31      2.9     1       0 31
+44      75      2.9     1       0 75
+45      107     2.9     1       0 107
+46      48      2.9     1       0 48
+47      82      2.9     1       0 82
+48      47      2.9     1       0 47
+49      37      2.9     1       0 37
+50      173     2.9     1       0 173
+51      54      2.9     1       0 54
+52      79      2.9     1       0 79
+53      41      2.9     1       0 41
+54      97      2.9     1       0 97
+55      65      2.9     1       0 65
+56      25      2.9     1       0 25
+57      53      2.9     1       0 53
+58      93      2.9     1       0 93
+59      71      2.9     1       0 71
+60      50      2.9     1       0 50
+61      80      2.9     1       0 80
+62      11      2.9     1       0 11
+63      60      2.9     1       0 60
+64      54      2.9     1       0 54
+65      70      2.9     1       0 70
+66      78      2.9     1       0 78
+67      80      2.9     1       0 80
+68      46      2.9     1       0 46
+69      54      2.9     1       0 54
+70      36      2.9     1       0 36
+71      53      2.9     1       0 53
+72      57      2.9     1       0 57
+73      78      2.9     1       0 78
+74      46      2.9     1       0 46
+75      82      2.9     1       0 82
+76      36      2.9     1       0 36
+77      49      2.9     1       0 49
+78      24      2.9     1       0 24
+79      70      2.9     1       0 70
+80      24      2.9     1       0 24
+81      48      2.9     1       0 48
+82      26      2.9     1       0 26
+83      34      2.9     1       0 34
+84      35      2.9     1       0 35
+85      46      2.9     1       0 46
+86      27      2.9     1       0 27
+87      81      2.9     1       0 81
+88      40      2.9     1       0 40
+89      23      2.9     1       0 23
+90      67      2.9     1       0 67
+91      48      2.9     1       0 48
+92      71      2.9     1       0 71
+93      18      2.9     1       0 18
+94      18      2.9     1       0 18
+95      16      2.9     1       0 16
+96      24      2.9     1       0 24
+97      27      2.9     1       0 27
+98      14      2.9     1       0 14
+99      46      2.9     1       0 46
+100     26      2.9     1       0 26
+101     42      2.9     1       0 42
+102     25      2.9     1       0 25
+103     45      2.9     1       0 45
+104     10      2.9     1       0 10
+105     34      2.9     1       0 34
+106     33      2.9     1       0 33
+107     18      2.9     1       0 18
+108     4       2.9     1       0 4
+109     29      2.9     1       0 29
+110     4       2.9     1       0 4
+111     31      2.9     1       0 31
+112     32      2.9     1       0 32
+113     10      2.9     1       0 10
+114     13      2.9     1       0 13
+115     3       2.9     1       0 3
+116     2       2.9     1       0 2
+117     34      2.9     1       0 34
+118     6       2.9     1       0 6
+119     1       2.9     1       0 1
+120     10      2.9     1       0 10
+121     13      2.9     1       0 13
+122     18      2.9     1       0 18
+123     4       2.9     1       0 4
+124     6       2.9     1       0 6
+125     11      2.9     1       0 11
+126     21      2.9     1       0 21
+127     3       2.9     1       0 3
+129     13      2.9     1       0 13
+130     3       2.9     1       0 3
+131     10      2.9     1       0 10
+132     3       2.9     1       0 3
+133     6       2.9     1       0 6
+application/gzip
+Started analysis of sampleB_R1.out.fq.gz
+Approx 5% complete for sampleB_R1.out.fq.gz
+Approx 10% complete for sampleB_R1.out.fq.gz
+Approx 15% complete for sampleB_R1.out.fq.gz
+Approx 20% complete for sampleB_R1.out.fq.gz
+Approx 25% complete for sampleB_R1.out.fq.gz
+Approx 30% complete for sampleB_R1.out.fq.gz
+Approx 35% complete for sampleB_R1.out.fq.gz
+Approx 40% complete for sampleB_R1.out.fq.gz
+Approx 45% complete for sampleB_R1.out.fq.gz
+Approx 50% complete for sampleB_R1.out.fq.gz
+Approx 55% complete for sampleB_R1.out.fq.gz
+Approx 60% complete for sampleB_R1.out.fq.gz
+Approx 65% complete for sampleB_R1.out.fq.gz
+Approx 70% complete for sampleB_R1.out.fq.gz
+Approx 75% complete for sampleB_R1.out.fq.gz
+Approx 80% complete for sampleB_R1.out.fq.gz
+Approx 85% complete for sampleB_R1.out.fq.gz
+Approx 90% complete for sampleB_R1.out.fq.gz
+Approx 95% complete for sampleB_R1.out.fq.gz
+Analysis complete for sampleB_R1.out.fq.gz
+application/gzip
+Started analysis of sampleB_R2.out.fq.gz
+Approx 5% complete for sampleB_R2.out.fq.gz
+Approx 10% complete for sampleB_R2.out.fq.gz
+Approx 15% complete for sampleB_R2.out.fq.gz
+Approx 20% complete for sampleB_R2.out.fq.gz
+Approx 25% complete for sampleB_R2.out.fq.gz
+Approx 30% complete for sampleB_R2.out.fq.gz
+Approx 35% complete for sampleB_R2.out.fq.gz
+Approx 40% complete for sampleB_R2.out.fq.gz
+Approx 45% complete for sampleB_R2.out.fq.gz
+Approx 50% complete for sampleB_R2.out.fq.gz
+Approx 55% complete for sampleB_R2.out.fq.gz
+Approx 60% complete for sampleB_R2.out.fq.gz
+Approx 65% complete for sampleB_R2.out.fq.gz
+Approx 70% complete for sampleB_R2.out.fq.gz
+Approx 75% complete for sampleB_R2.out.fq.gz
+Approx 80% complete for sampleB_R2.out.fq.gz
+Approx 85% complete for sampleB_R2.out.fq.gz
+Approx 90% complete for sampleB_R2.out.fq.gz
+Approx 95% complete for sampleB_R2.out.fq.gz
+Analysis complete for sampleB_R2.out.fq.gz
+[bwa_index] Pack FASTA... 7.90 sec
+[bwa_index] Construct BWT for the packed sequence...
+[BWTIncCreate] textLength=4263693610, availableWord=312009088
+[BWTIncConstructFromPacked] 10 iterations done. 99999994 characters processed.
+[BWTIncConstructFromPacked] 20 iterations done. 199999994 characters processed.
+[BWTIncConstructFromPacked] 30 iterations done. 299999994 characters processed.
+[BWTIncConstructFromPacked] 40 iterations done. 399999994 characters processed.
+[BWTIncConstructFromPacked] 50 iterations done. 499999994 characters processed.
+[BWTIncConstructFromPacked] 60 iterations done. 599999994 characters processed.
+[BWTIncConstructFromPacked] 70 iterations done. 699999994 characters processed.
+[BWTIncConstructFromPacked] 80 iterations done. 799999994 characters processed.
+[BWTIncConstructFromPacked] 90 iterations done. 899999994 characters processed.
+[BWTIncConstructFromPacked] 100 iterations done. 999999994 characters processed.
+[BWTIncConstructFromPacked] 110 iterations done. 1099999994 characters processed.
+[BWTIncConstructFromPacked] 120 iterations done. 1199999994 characters processed.
+[BWTIncConstructFromPacked] 130 iterations done. 1299999994 characters processed.
+[BWTIncConstructFromPacked] 140 iterations done. 1399999994 characters processed.
+[BWTIncConstructFromPacked] 150 iterations done. 1499999994 characters processed.
+[BWTIncConstructFromPacked] 160 iterations done. 1599999994 characters processed.
+[BWTIncConstructFromPacked] 170 iterations done. 1699999994 characters processed.
+[BWTIncConstructFromPacked] 180 iterations done. 1799999994 characters processed.
+[BWTIncConstructFromPacked] 190 iterations done. 1899999994 characters processed.
+[BWTIncConstructFromPacked] 200 iterations done. 1999999994 characters processed.
+[BWTIncConstructFromPacked] 210 iterations done. 2099999994 characters processed.
+[BWTIncConstructFromPacked] 220 iterations done. 2199999994 characters processed.
+[BWTIncConstructFromPacked] 230 iterations done. 2299999994 characters processed.
+[BWTIncConstructFromPacked] 240 iterations done. 2399999994 characters processed.
+[BWTIncConstructFromPacked] 250 iterations done. 2499999994 characters processed.
+[BWTIncConstructFromPacked] 260 iterations done. 2599999994 characters processed.
+[BWTIncConstructFromPacked] 270 iterations done. 2699999994 characters processed.
+[BWTIncConstructFromPacked] 280 iterations done. 2799999994 characters processed.
+[BWTIncConstructFromPacked] 290 iterations done. 2899999994 characters processed.
+[BWTIncConstructFromPacked] 300 iterations done. 2999999994 characters processed.
+[BWTIncConstructFromPacked] 310 iterations done. 3099999994 characters processed.
+[BWTIncConstructFromPacked] 320 iterations done. 3199999994 characters processed.
+[BWTIncConstructFromPacked] 330 iterations done. 3299999994 characters processed.
+[BWTIncConstructFromPacked] 340 iterations done. 3399999994 characters processed.
+[BWTIncConstructFromPacked] 350 iterations done. 3499999994 characters processed.
+[BWTIncConstructFromPacked] 360 iterations done. 3599915914 characters processed.
+[BWTIncConstructFromPacked] 370 iterations done. 3692901178 characters processed.
+[BWTIncConstructFromPacked] 380 iterations done. 3775542762 characters processed.
+[BWTIncConstructFromPacked] 390 iterations done. 3848990778 characters processed.
+[BWTIncConstructFromPacked] 400 iterations done. 3914267578 characters processed.
+[BWTIncConstructFromPacked] 410 iterations done. 3972281738 characters processed.
+[BWTIncConstructFromPacked] 420 iterations done. 4023840858 characters processed.
+[BWTIncConstructFromPacked] 430 iterations done. 4069662730 characters processed.
+[BWTIncConstructFromPacked] 440 iterations done. 4110385322 characters processed.
+[BWTIncConstructFromPacked] 450 iterations done. 4146575594 characters processed.
+[BWTIncConstructFromPacked] 460 iterations done. 4178737578 characters processed.
+[BWTIncConstructFromPacked] 470 iterations done. 4207319210 characters processed.
+[BWTIncConstructFromPacked] 480 iterations done. 4232718586 characters processed.
+[BWTIncConstructFromPacked] 490 iterations done. 4255289594 characters processed.
+[bwt_gen] Finished constructing BWT in 495 iterations.
+[bwa_index] 1282.30 seconds elapse.
+[bwa_index] Update BWT... 8.07 sec
+[bwa_index] Pack forward-only FASTA... 5.28 sec
+[bwa_index] Construct SA from BWT and Occ...
+682.58 sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa index reference.fa
+[main] Real time: 4745.947 sec; CPU: 1986.137 sec
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[W::main_mem] when '-p' is in use, the second query file is ignored.
+[M::process] read 73498 sequences (10000118 bp)...
+[M::process] 73498 single-end sequences; 0 paired-end sequences
+[M::process] read 73574 sequences (10000046 bp)...
+[M::mem_process_seqs] Processed 73498 reads in 16.149 CPU sec, 30.102 real sec
+[M::process] 73574 single-end sequences; 0 paired-end sequences
+[M::process] read 73486 sequences (10000192 bp)...
+[M::mem_process_seqs] Processed 73574 reads in 15.569 CPU sec, 15.359 real sec
+[M::process] 73486 single-end sequences; 0 paired-end sequences
+[M::process] read 73460 sequences (10000198 bp)...
+[M::mem_process_seqs] Processed 73486 reads in 15.977 CPU sec, 16.231 real sec
+[M::process] 73460 single-end sequences; 0 paired-end sequences
+[M::process] read 73518 sequences (10000013 bp)...
+[M::mem_process_seqs] Processed 73460 reads in 15.434 CPU sec, 15.079 real sec
+[M::process] 73518 single-end sequences; 0 paired-end sequences
+[M::process] read 73526 sequences (10000145 bp)...
+[M::mem_process_seqs] Processed 73518 reads in 14.268 CPU sec, 14.455 real sec
+[M::process] 73526 single-end sequences; 0 paired-end sequences
+[M::process] read 73504 sequences (10000132 bp)...
+[M::mem_process_seqs] Processed 73526 reads in 14.607 CPU sec, 14.218 real sec
+[M::process] 73504 single-end sequences; 0 paired-end sequences
+[M::process] read 73478 sequences (10000139 bp)...
+[M::mem_process_seqs] Processed 73504 reads in 13.699 CPU sec, 13.841 real sec
+[M::process] 73478 single-end sequences; 0 paired-end sequences
+[M::process] read 73526 sequences (10000118 bp)...
+[M::mem_process_seqs] Processed 73478 reads in 13.981 CPU sec, 13.582 real sec
+[M::process] 73526 single-end sequences; 0 paired-end sequences
+[M::process] read 73488 sequences (10000121 bp)...
+[M::mem_process_seqs] Processed 73526 reads in 13.473 CPU sec, 13.616 real sec
+[M::process] 73488 single-end sequences; 0 paired-end sequences
+[M::process] read 73454 sequences (10000177 bp)...
+[M::mem_process_seqs] Processed 73488 reads in 13.280 CPU sec, 12.863 real sec
+[M::process] 73454 single-end sequences; 0 paired-end sequences
+[M::process] read 73526 sequences (10000059 bp)...
+[M::mem_process_seqs] Processed 73454 reads in 13.836 CPU sec, 13.980 real sec
+[M::process] 73526 single-end sequences; 0 paired-end sequences
+[M::process] read 73586 sequences (10000201 bp)...
+[M::mem_process_seqs] Processed 73526 reads in 13.307 CPU sec, 13.393 real sec
+[M::process] 73586 single-end sequences; 0 paired-end sequences
+[M::process] read 73568 sequences (10000238 bp)...
+[M::mem_process_seqs] Processed 73586 reads in 13.383 CPU sec, 12.983 real sec
+[M::process] 73568 single-end sequences; 0 paired-end sequences
+[M::process] read 73552 sequences (10000138 bp)...
+[M::mem_process_seqs] Processed 73568 reads in 13.463 CPU sec, 13.601 real sec
+[M::process] 73552 single-end sequences; 0 paired-end sequences
+[M::process] read 73520 sequences (10000170 bp)...
+[M::mem_process_seqs] Processed 73552 reads in 13.550 CPU sec, 13.148 real sec
+[M::process] 73520 single-end sequences; 0 paired-end sequences
+[M::process] read 73474 sequences (10000224 bp)...
+[M::mem_process_seqs] Processed 73520 reads in 13.276 CPU sec, 13.429 real sec
+[M::process] 73474 single-end sequences; 0 paired-end sequences
+[M::process] read 73538 sequences (10000184 bp)...
+[M::mem_process_seqs] Processed 73474 reads in 13.549 CPU sec, 13.143 real sec
+[M::process] 73538 single-end sequences; 0 paired-end sequences
+[M::process] read 73494 sequences (10000055 bp)...
+[M::mem_process_seqs] Processed 73538 reads in 13.646 CPU sec, 13.741 real sec
+[M::process] 73494 single-end sequences; 0 paired-end sequences
+[M::process] read 73470 sequences (10000287 bp)...
+[M::mem_process_seqs] Processed 73494 reads in 13.369 CPU sec, 13.472 real sec
+[M::process] 73470 single-end sequences; 0 paired-end sequences
+[M::process] read 73454 sequences (10000050 bp)...
+[M::mem_process_seqs] Processed 73470 reads in 13.931 CPU sec, 13.573 real sec
+[M::process] 73454 single-end sequences; 0 paired-end sequences
+[M::process] read 73546 sequences (10000077 bp)...
+[M::mem_process_seqs] Processed 73454 reads in 13.094 CPU sec, 13.189 real sec
+[M::process] 73546 single-end sequences; 0 paired-end sequences
+[M::process] read 73592 sequences (10000053 bp)...
+[M::mem_process_seqs] Processed 73546 reads in 13.796 CPU sec, 13.430 real sec
+[M::process] 73592 single-end sequences; 0 paired-end sequences
+[M::process] read 73432 sequences (10000035 bp)...
+[M::mem_process_seqs] Processed 73592 reads in 13.169 CPU sec, 13.272 real sec
+[M::process] 73432 single-end sequences; 0 paired-end sequences
+[M::process] read 73490 sequences (10000136 bp)...
+[M::mem_process_seqs] Processed 73432 reads in 13.507 CPU sec, 13.592 real sec
+[M::process] 73490 single-end sequences; 0 paired-end sequences
+[M::process] read 73440 sequences (10000119 bp)...
+[M::mem_process_seqs] Processed 73490 reads in 13.773 CPU sec, 13.308 real sec
+[M::process] 73440 single-end sequences; 0 paired-end sequences
+[M::process] read 73610 sequences (10000264 bp)...
+[M::mem_process_seqs] Processed 73440 reads in 13.705 CPU sec, 13.818 real sec
+[M::process] 73610 single-end sequences; 0 paired-end sequences
+[M::process] read 47360 sequences (6433565 bp)...
+[M::mem_process_seqs] Processed 73610 reads in 13.340 CPU sec, 12.859 real sec
+[M::process] 47360 single-end sequences; 0 paired-end sequences
+[M::mem_process_seqs] Processed 47360 reads in 8.438 CPU sec, 8.452 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -p reference.fa sampleB/sampleB_R1.out.fq.gz sampleB/sampleB_R2.out.fq.gz
+[main] Real time: 404.696 sec; CPU: 391.893 sec
+INFO [Mar 07,2025 14:36] [Main] Startup  IGV Version user not_set
+INFO [Mar 07,2025 14:36] [Main] Java 21.0.6 (build 21.0.6+7-Ubuntu-124.04.1) 2025-01-21
+INFO [Mar 07,2025 14:36] [Main] Java Vendor: Ubuntu https://ubuntu.com/
+INFO [Mar 07,2025 14:36] [Main] JVM: OpenJDK 64-Bit Server VM
+INFO [Mar 07,2025 14:36] [Main] OS: Linux 5.15.167.4-microsoft-standard-WSL2 amd64
+INFO [Mar 07,2025 14:36] [Main] IGV Directory: /home/abehera/igv
+MESA: error: ZINK: failed to choose pdev
+glx: failed to create drisw screen
+INFO [Mar 07,2025 14:36] [CommandListener] Listening on port 60151
+INFO [Mar 07,2025 14:36] [GenomeManager] Loading genome: /home/abehera/NGS_practice/reference.fa
+WARNING [Mar 07,2025 14:36] [LoadFromServerAction] No data found for current genome.
+INFO [Mar 07,2025 14:38] [ShutdownThread] Shutting down
+[mpileup] 1 samples in 1 input files
+[mpileup] maximum number of reads per input file set to -d 250
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+abehera@hp:~$

@@ -1,0 +1,61 @@
+#!/bin/bash
+
+#Changing to desired directory
+cd NGS_practice
+
+#Making new directory for sample B
+mkdir sampleB
+
+#Quality control
+fastqc sampleB_R1.fq.gz
+fastqc sampleB_R2.fq.gz
+
+#moving the html files to required directory 
+mv sampleB_R1.fq.gz.html sampleB/sampleB_R1.fq.gz.html
+mv sampleB_R2.fq.gz.html sampleB/sampleB_R2.fq.gz.html
+
+#Trimming
+cutadapt -a AGATCGGAAG -A AGATCGGAAG -m 100 -o sampleB/sampleB_R1.out.fq.gz -p sampleB/sampleB_R2.out.fq.gz sampleB_R1.fq.gz sampleB_R2.fq.gz
+
+fastqc sampleB/sampleB_R1.out.fq.gz
+fastqc sampleB/sampleB_R2.out.fq.gz
+
+#Alignment 
+bwa index reference.fa
+bwa mem reference.fa sampleB/sampleB_R1.out.fq.gz -p sampleB/sampleB_R2.out.fq.gz > sampleB/sampleB.sam
+
+less sampleB/sampleB.sam
+
+#Post alignment processing 
+samtools view -S -b sampleB/sampleB.sam > sampleB/sampleB.bam #converting sam to bam
+samtools sort sampleB/sampleB.bam -o sampleB/sampleB.sorted.bam #sorting the bam file
+samtools index sampleB/sampleB.sorted.bam #indexing the sorted bam file
+
+#Visulaising bam 
+igv
+
+#Variant calling 
+bcftools mpileup -Ou -f reference.fa sampleB/sampleB.sorted.bam > sampleB/sampleB.mpileup #generating mpileup
+bcftools call -mv -Ob -o sampleB/variantsB.bcf sampleB/sampleB.mpileup #variant calling
+bcftools view sampleB/variantsB.bcf > sampleB/variantsB.vcf #converting bcf to vcf
+less sampleB/variantsB.vcf
+bcftools stats sampleB/variantsB.vcf > sampleB/vsumB.txt #summarizing vcf file
+less sampleB/vsumB.txt
+
+#Variant filtering 
+bcftools filter -e 'QUAL<20 || DP<10' -o sampleB/filteredvariants.vcf sampleB/variantsB.vcf
+less sampleB/filteredvariants.vcf
+bcftools stats sampleB/filteredvariants.vcf > sampleB/filtvsumB.txt 
+less sampleB/filtvsumB.txt
+
+
+
+
+ 
+
+
+
+
+
+ 
+
