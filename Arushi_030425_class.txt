@@ -1,0 +1,36 @@
+abehera@hp:~$ sudo apt install bcftools
+[sudo] password for abehera:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+bcftools is already the newest version (1.19-1build2).
+0 upgraded, 0 newly installed, 0 to remove and 102 not upgraded.
+abehera@hp:~$ cd NGS_practice
+abehera@hp:~/NGS_practice$ bcftools mpileup -Ou -f reference.fa postalignedf/sampleA.sorted.bam > variantf/sampleA.mpileup
+[mpileup] 1 samples in 1 input files
+[mpileup] maximum number of reads per input file set to -d 250
+abehera@hp:~/NGS_practice$ bcftools call -mv -Ob -o variantf/variantsA.bcf variantA/sampleA.mpileup
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+[E::hts_open_format] Failed to open file "variantA/sampleA.mpileup" : No such file or directory
+Failed to read from variantA/sampleA.mpileup: No such file or directory
+abehera@hp:~/NGS_practice$ bcftools call -mv -Ob -o variantf/variantsA.bcf variantf/sampleA.mpileup
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+abehera@hp:~/NGS_practice$ bcftools view variantsA.bcf > variantsA.vcf
+[E::hts_open_format] Failed to open file "variantsA.bcf" : No such file or directory
+Failed to read from variantsA.bcf: No such file or directory
+abehera@hp:~/NGS_practice$ bcftools view variantf/variantsA.bcf > variantf/variantsA.vcf
+abehera@hp:~/NGS_practice$ less variantf/variantsA.vcf
+abehera@hp:~/NGS_practice$ mkdir NGS_summary
+abehera@hp:~/NGS_practice$ bcftools stats variantf/variantsA.vcf > NGS_summary/vsum.txt
+abehera@hp:~/NGS_practice$ less NGS_summary/vsum.txt
+abehera@hp:~/NGS_practice$ bcftools filter -e 'QUAL<20' -o variantf/filtered_by_qual.vcf variantf/variantsA.vcf
+abehera@hp:~/NGS_practice$ bcftools filter -e 'DP<10' -o variantf/filtered_by_depth.vcf variantf/variantsA.vcf
+abehera@hp:~/NGS_practice$ bcftools filter -e 'QUAL<20 || DP<10' -o variantf/filtered_variants.vcf variantf/variantsA.vc
+f
+abehera@hp:~/NGS_practice$ bcftools stats variantf/filtered_by_qual.vcf > NGS_summary/vqual.txt
+abehera@hp:~/NGS_practice$ less NGS_summary/vqual.txt
+abehera@hp:~/NGS_practice$ bcftools stats variantf/filtered_by_depth.vcf > NGS_summary/vdepth.txt
+abehera@hp:~/NGS_practice$ less NGS_summary/vdepth.txt
+abehera@hp:~/NGS_practice$ bcftools stats variantf/filtered_variants.vcf > NGS_summary/vqualdepth.txt
+abehera@hp:~/NGS_practice$ less NGS_summary/vqualdepth.txt
+abehera@hp:~/NGS_practice$

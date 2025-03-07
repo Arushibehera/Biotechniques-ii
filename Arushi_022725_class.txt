@@ -1,0 +1,148 @@
+abehera@hp:~$ cd NGS_practice
+abehera@hp:~/NGS_practice$ sudo apt install bwa
+[sudo] password for abehera:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+bwa is already the newest version (0.7.17-7).
+0 upgraded, 0 newly installed, 0 to remove and 102 not upgraded.
+abehera@hp:~/NGS_practice$ bwa index reference.fa
+[bwa_index] Pack FASTA... 8.14 sec
+[bwa_index] Construct BWT for the packed sequence...
+[BWTIncCreate] textLength=4263693610, availableWord=312009088
+[BWTIncConstructFromPacked] 10 iterations done. 99999994 characters processed.
+[BWTIncConstructFromPacked] 20 iterations done. 199999994 characters processed.
+[BWTIncConstructFromPacked] 30 iterations done. 299999994 characters processed.
+[BWTIncConstructFromPacked] 40 iterations done. 399999994 characters processed.
+[BWTIncConstructFromPacked] 50 iterations done. 499999994 characters processed.
+[BWTIncConstructFromPacked] 60 iterations done. 599999994 characters processed.
+[BWTIncConstructFromPacked] 70 iterations done. 699999994 characters processed.
+[BWTIncConstructFromPacked] 80 iterations done. 799999994 characters processed.
+[BWTIncConstructFromPacked] 90 iterations done. 899999994 characters processed.
+[BWTIncConstructFromPacked] 100 iterations done. 999999994 characters processed.
+[BWTIncConstructFromPacked] 110 iterations done. 1099999994 characters processed.
+[BWTIncConstructFromPacked] 120 iterations done. 1199999994 characters processed.
+[BWTIncConstructFromPacked] 130 iterations done. 1299999994 characters processed.
+[BWTIncConstructFromPacked] 140 iterations done. 1399999994 characters processed.
+[BWTIncConstructFromPacked] 150 iterations done. 1499999994 characters processed.
+[BWTIncConstructFromPacked] 160 iterations done. 1599999994 characters processed.
+[BWTIncConstructFromPacked] 170 iterations done. 1699999994 characters processed.
+[BWTIncConstructFromPacked] 180 iterations done. 1799999994 characters processed.
+[BWTIncConstructFromPacked] 190 iterations done. 1899999994 characters processed.
+[BWTIncConstructFromPacked] 200 iterations done. 1999999994 characters processed.
+[BWTIncConstructFromPacked] 210 iterations done. 2099999994 characters processed.
+[BWTIncConstructFromPacked] 220 iterations done. 2199999994 characters processed.
+[BWTIncConstructFromPacked] 230 iterations done. 2299999994 characters processed.
+[BWTIncConstructFromPacked] 240 iterations done. 2399999994 characters processed.
+[BWTIncConstructFromPacked] 250 iterations done. 2499999994 characters processed.
+[BWTIncConstructFromPacked] 260 iterations done. 2599999994 characters processed.
+[BWTIncConstructFromPacked] 270 iterations done. 2699999994 characters processed.
+[BWTIncConstructFromPacked] 280 iterations done. 2799999994 characters processed.
+[BWTIncConstructFromPacked] 290 iterations done. 2899999994 characters processed.
+[BWTIncConstructFromPacked] 300 iterations done. 2999999994 characters processed.
+[BWTIncConstructFromPacked] 310 iterations done. 3099999994 characters processed.
+[BWTIncConstructFromPacked] 320 iterations done. 3199999994 characters processed.
+[BWTIncConstructFromPacked] 330 iterations done. 3299999994 characters processed.
+[BWTIncConstructFromPacked] 340 iterations done. 3399999994 characters processed.
+[BWTIncConstructFromPacked] 350 iterations done. 3499999994 characters processed.
+[BWTIncConstructFromPacked] 360 iterations done. 3599915914 characters processed.
+[BWTIncConstructFromPacked] 370 iterations done. 3692901178 characters processed.
+[BWTIncConstructFromPacked] 380 iterations done. 3775542762 characters processed.
+[BWTIncConstructFromPacked] 390 iterations done. 3848990778 characters processed.
+[BWTIncConstructFromPacked] 400 iterations done. 3914267578 characters processed.
+[BWTIncConstructFromPacked] 410 iterations done. 3972281738 characters processed.
+[BWTIncConstructFromPacked] 420 iterations done. 4023840858 characters processed.
+[BWTIncConstructFromPacked] 430 iterations done. 4069662730 characters processed.
+[BWTIncConstructFromPacked] 440 iterations done. 4110385322 characters processed.
+[BWTIncConstructFromPacked] 450 iterations done. 4146575594 characters processed.
+[BWTIncConstructFromPacked] 460 iterations done. 4178737578 characters processed.
+[BWTIncConstructFromPacked] 470 iterations done. 4207319210 characters processed.
+[BWTIncConstructFromPacked] 480 iterations done. 4232718586 characters processed.
+[BWTIncConstructFromPacked] 490 iterations done. 4255289594 characters processed.
+[bwt_gen] Finished constructing BWT in 495 iterations.
+[bwa_index] 1248.69 seconds elapse.
+[bwa_index] Update BWT... 9.22 sec
+[bwa_index] Pack forward-only FASTA... 5.46 sec
+[bwa_index] Construct SA from BWT and Occ... 654.57 sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa index reference.fa
+[main] Real time: 2144.878 sec; CPU: 1926.071 sec
+abehera@hp:~/NGS_practice$ rm alignedf/sampleA.sam
+abehera@hp:~/NGS_practice$ ls alignedf
+abehera@hp:~/NGS_practice$ bwa mem reference.fa sampleA_R1.out.fq.gz -p sampleA_R2.out.fq.gz > alignedf/sampleA.sam
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[E::main_mem] fail to open file `sampleA_R1.out.fq.gz'.
+abehera@hp:~/NGS_practice$ bwa mem reference.fa sampleA_R1.out.fq.gz sampleA_R2.out.fq.gz > alignedf/sampleA.sam
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[E::main_mem] fail to open file `sampleA_R1.out.fq.gz'.
+abehera@hp:~/NGS_practice$ bwa mem reference.fa trimmedf/sampleA_R1.out.fq.gz -p trimmedf/sampleA_R2.out.fq.gz > aligned
+f/sampleA.sam
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[W::main_mem] when '-p' is in use, the second query file is ignored.
+[M::process] read 75450 sequences (10000074 bp)...
+[M::process] 75450 single-end sequences; 0 paired-end sequences
+[M::process] read 75500 sequences (10000157 bp)...
+[M::mem_process_seqs] Processed 75450 reads in 17.531 CPU sec, 17.192 real sec
+[M::process] 75500 single-end sequences; 0 paired-end sequences
+[M::process] read 75362 sequences (10000029 bp)...
+[M::mem_process_seqs] Processed 75500 reads in 17.800 CPU sec, 17.898 real sec
+[M::process] 75362 single-end sequences; 0 paired-end sequences
+[M::process] read 75336 sequences (10000175 bp)...
+[M::mem_process_seqs] Processed 75362 reads in 16.606 CPU sec, 16.407 real sec
+[M::process] 75336 single-end sequences; 0 paired-end sequences
+[M::process] read 75266 sequences (10000153 bp)...
+[M::mem_process_seqs] Processed 75336 reads in 17.527 CPU sec, 17.545 real sec
+[M::process] 75266 single-end sequences; 0 paired-end sequences
+[M::process] read 75344 sequences (10000248 bp)...
+[M::mem_process_seqs] Processed 75266 reads in 17.990 CPU sec, 17.744 real sec
+[M::process] 75344 single-end sequences; 0 paired-end sequences
+[M::process] read 67466 sequences (8967301 bp)...
+[M::mem_process_seqs] Processed 75344 reads in 17.666 CPU sec, 17.721 real sec
+[M::process] 67466 single-end sequences; 0 paired-end sequences
+[M::mem_process_seqs] Processed 67466 reads in 15.732 CPU sec, 15.543 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem -p reference.fa trimmedf/sampleA_R1.out.fq.gz trimmedf/sampleA_R2.out.fq.gz
+[main] Real time: 121.805 sec; CPU: 122.404 sec
+abehera@hp:~/NGS_practice$ less alignedf/sampleA.sam
+abehera@hp:~/NGS_practice$ sudo apt install samtools
+[sudo] password for abehera:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+samtools is already the newest version (1.19.2-1build2).
+0 upgraded, 0 newly installed, 0 to remove and 102 not upgraded.
+abehera@hp:~/NGS_practice$ samtools view -S -b sampleA.sam > sampleA.bam
+[E::hts_open_format] Failed to open file "sampleA.sam" : No such file or directory
+samtools view: failed to open "sampleA.sam" for reading: No such file or directory
+abehera@hp:~/NGS_practice$ samtools view -S -b alignedf/sampleA.sam > alignedf/sampleA.bam
+abehera@hp:~/NGS_practice$ mv alignedf/sampleA.bam postalignedf/sampleA.bam
+abehera@hp:~/NGS_practice$ samtools sort postalignedf/sampleA.bam -o postalignedf/sampleA.sorted.bam
+abehera@hp:~/NGS_practice$ samtools index postalignedf/sampleA.sorted.bam
+abehera@hp:~/NGS_practice$ sudo apt install igv
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+igv is already the newest version (2.17.3+dfsg-1).
+0 upgraded, 0 newly installed, 0 to remove and 102 not upgraded.
+abehera@hp:~/NGS_practice$ igv
+INFO [Mar 06,2025 22:52] [Main] Startup  IGV Version user not_set
+INFO [Mar 06,2025 22:52] [Main] Java 21.0.6 (build 21.0.6+7-Ubuntu-124.04.1) 2025-01-21
+INFO [Mar 06,2025 22:52] [Main] Java Vendor: Ubuntu https://ubuntu.com/
+INFO [Mar 06,2025 22:52] [Main] JVM: OpenJDK 64-Bit Server VM
+INFO [Mar 06,2025 22:52] [Main] OS: Linux 5.15.167.4-microsoft-standard-WSL2 amd64
+INFO [Mar 06,2025 22:52] [Main] IGV Directory: /home/abehera/igv
+MESA: error: ZINK: failed to choose pdev
+glx: failed to create drisw screen
+INFO [Mar 06,2025 22:52] [CommandListener] Listening on port 60151
+INFO [Mar 06,2025 22:52] [GenomeManager] Loading genome: /home/abehera/NGS_practice/reference.fa
+INFO [Mar 06,2025 22:52] [FastaUtils] Creating index file at /home/abehera/NGS_practice/reference.fa.fai
+SEVERE [Mar 06,2025 22:52] [SessionWriter] Error creating session.
+SEVERE [Mar 06,2025 22:52] [SessionWriter] java.lang.NullPointerException: Cannot invoke "org.broad.igv.feature.genome.Genome.getAnnotationResources()" because the return value of "org.broad.igv.feature.genome.GenomeManager.getCurrentGenome()" is null
+        at org.broad.igv.session.SessionWriter.getResourceLocatorSet(SessionWriter.java:430)
+        at org.broad.igv.session.SessionWriter.writeResources(SessionWriter.java:297)
+        at org.broad.igv.session.SessionWriter.createXmlFromSession(SessionWriter.java:152)
+        at org.broad.igv.session.SessionWriter.saveSession(SessionWriter.java:91)
+        at org.broad.igv.session.autosave.SessionAutosaveManager.saveExitSessionAutosaveFile(SessionAutosaveManager.java:49)
+        at org.broad.igv.ui.IGV.saveStateForExit(IGV.java:520)
+        at org.broad.igv.ui.ShutdownThread.runS(ShutdownThread.java:46)
+        at org.broad.igv.ui.ShutdownThread.run(ShutdownThread.java:60)
